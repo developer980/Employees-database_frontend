@@ -1,8 +1,8 @@
 import logo from "./logo.svg";
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Home from "./pages/home";
-import add_employee from "./pages/add_employee";
+import Home from "./pages/home/home";
+import add_employee from "./pages/add_employee/add_employee";
 import employees from "./pages/employees";
 import "./App.css";
 

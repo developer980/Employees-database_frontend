@@ -14,3 +14,11 @@
     margin-top: 150px;
     margin-left: 17%;
 }
+@media (max-width:850px){
+    .list{
+        width:100%;
+        height:fit-content;
+        margin-top: 150px;
+        margin-left:0px;
+    }
+}

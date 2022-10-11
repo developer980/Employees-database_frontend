@@ -1,9 +1,9 @@
 import React from "react";
-import "../pages/add_employee.css";
+import "./add_employee.css";
 import {connect} from 'react-redux';
-// import { addEmployee } from "../redux/list/list";
+import { addEmployee } from "../../redux/list/list";
 import { Link } from "react-router-dom";
-import Layout from "../components/layout";
+import Layout from "../../components/layout/layout";
 import Axios from 'axios'
 
 class add_employee extends React.Component{
@@ -28,7 +28,7 @@ class add_employee extends React.Component{
             <Layout enabled = {'list'}>
                 <div>
                 <form className="nice-form" onSubmit={() => {
-                    Axios.post('http://localhost:3001/update_employees', {
+                    Axios.post('https://employees-database-test.herokuapp.com/update_employees', {
                         firstName:this.state.firstName,
                         lastName:this.state.lastName,
                         position:this.state.position,
@@ -54,7 +54,7 @@ class add_employee extends React.Component{
                     
                     <label htmlFor="Data angajarii">Employment date</label>
                         <input className="home-input" type="date" onChange={(event)=>this.employment_date(event)}/>
-                <button className="add-user" type = "submit">Adauga angajat</button>
+                <button className="add-user" type = "submit">Submit employee</button>
                 </form>
                 </div>
                 </Layout>
@@ -101,9 +101,9 @@ class add_employee extends React.Component{
     }
 }
 
-// function mapDispatchToProps(dispatch){
-//     return{
-//         addEmployee: (payload) => dispatch(addEmployee(payload))
-//     }
-// }
-export default add_employee;
+function mapDispatchToProps(dispatch){
+    return{
+        addEmployee: (payload) => dispatch(addEmployee(payload))
+    }
+}
+export default connect(null, mapDispatchToProps)(add_employee);

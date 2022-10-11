@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../components/layout";
-import Employee_list from "../components/employee_list";
+// import Layout from "../components/layout/layout";
+import Employee_list from "../components/employees_list/employee_list";
 import { connect } from "react-redux";
 
 class employees extends React.Component{

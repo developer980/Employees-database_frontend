@@ -1,6 +1,6 @@
 import React from "react";
 import "./item.css";
-import X from "../icons/x.svg";
+import X from "../../icons/x.svg";
 import Axios from "axios";
 
 function employee_item(props){
@@ -43,7 +43,7 @@ function employee_item(props){
             <div className = "element">
                 <button className = "fire-button" onClick = {() => {
                     console.log(id);
-                    Axios.delete(`http://localhost:3001/delete/${id}`)
+                    Axios.delete(`https://employees-database-test.herokuapp.com/delete/${id}`)
                     .then(()=>{
                         window.location.reload();
                     })
