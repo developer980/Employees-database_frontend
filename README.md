@@ -1,5 +1,5 @@
 # The model of a recruiting platform
-Manage your company by adding employees :D
+Manage your company by adding/removing employees :D
 
 ![2022-10-17 (1)](https://user-images.githubusercontent.com/91996303/196224180-9171e95e-834c-4b94-80f8-ca1e5ea3a53d.png)
 
